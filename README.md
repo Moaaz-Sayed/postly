@@ -1,4 +1,5 @@
 📌 Project Overview – Postly
+
 Postly is a simple social media-like web application built using HTML, CSS, and JavaScript. It leverages the Tarmeez Academy API to fetch and manage data.
 
 🚀 Features
