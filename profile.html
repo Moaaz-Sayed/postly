@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!--Font Awesome Library for Icons-->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- googlr fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/profile.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Postly</h1>
+        </div>
+
+        <nav class="links">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./profile.html" class="profile">Profile</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+            <div class="usr">
+                <img src="./imges/user.png" alt="user-photo" class="user-photo" id="user-photo">
+                <h4></h4>
+            </div>
+        </div>
+
+        <div class="dropdown" id="dropdown-menu">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./profile.html" class="profile">Profile</a></li>
+            </ul>
+            <button id="out">Log out</button>
+        </div>
+
+        <div class="out desktop-only">
+            <button id="out">Log out</button>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="profile-info">
+                <div class="profile-photo-container">
+                    <img src="./imges/user.png" alt="User photo" class="profile-photo" id="profile-photo">
+                </div>
+                <div class="profile-text">
+                    <h2 id="r-name"></h2>
+                    <h3 class="username"></h3>
+                </div>
+            </div>
+
+            <div class="new-post">
+                <textarea id="post-content" placeholder="What's on your mind?" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="file-input" class="custom-upload">
+                        <i class="fa-solid fa-upload"></i> Upload photo
+                    </label>
+                    <span id="imageStatus"></span>
+                    <input type="file" id="file-input" style="display: none;">
+                </div>
+                <button id="post-btn">Post</button>
+            </div>
+
+            <div class="posts" id="posts"></div>
+        </div>
+        <!-- Edit Modale -->
+        <div id="edit-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <textarea id="edit-post-content"></textarea>
+                <input type="hidden" id="edit-post-id">
+                <button onclick="submitEdit()">Save</button>
+                <button onclick="closeEditModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-modal" id="imageModal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/auth-check.js"></script>
+    <script src="./js/helpers.js"></script>
+    <script src="./js/profile.js"></script>
+</body>
+
+</html>

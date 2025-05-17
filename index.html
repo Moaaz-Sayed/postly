@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postly | Log in or Sign up </title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Postly</h1>
+            <p>Log in to Postly </p>
+        </div>
+        <div class="login">
+            <form>
+                <input type="text" name="username" class="user" id="user" placeholder="User name">
+                <input type="password" name="password" class="pass" id="pass" placeholder="Password">
+                <button type="submit" class="submit" id="submit">Log in</button>
+            </form>
+            <div id="message" class="popup-message success"></div>
+            <button class="create" id="create">Create new account</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

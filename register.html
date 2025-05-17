@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up for Postly</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!--Font Awesome Library for Icons-->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Postly</h1>
+            <h2>Create a new account</h2>
+            <p>It's quick and easy.</p>
+        </div>
+        <form id="signup-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="file-upload">
+                <label for="file-input" class="custom-upload">
+                    <i class="fa-solid fa-upload"></i> Upload your photo
+                </label>
+                <input type="file" id="file-input" style="display: none;">
+            </div>
+
+            <button type="submit" id="submit">Sign Up</button>
+        </form>
+        <div id="message" class="popup-message success"></div>
+        <a href="./index.html">Already have an account?</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+
+</html>
